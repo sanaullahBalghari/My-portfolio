@@ -28,24 +28,26 @@ const skills = [
   "Python",
   "Django",
   "DRF",
+  "Nodejs",
+  "Nextjs",
   "Software Doucmentation",
 ];
 
-const clients = [
-  {
-    rating: 4,
-    description: "Excellent work, delivered on time and exceeded expectations.",
-    Name: "Sajid Ali",
-  },
-  {
-    rating: 3,
-    description: "Very professional and skilled. Will work again!",
-  },
-  {
-    rating: 4,
-    description: "Fantastic experience, highly recommend!",
-  },
-];
+// const clients = [
+//   {
+//     rating: 4,
+//     description: "Excellent work, delivered on time and exceeded expectations.",
+//     Name: "Sajid Ali",
+//   },
+//   {
+//     rating: 3,
+//     description: "Very professional and skilled. Will work again!",
+//   },
+//   {
+//     rating: 4,
+//     description: "Fantastic experience, highly recommend!",
+//   },
+// ];
 
 // Counter Component
 const Counter = ({ end, duration = 1000 }) => {
@@ -180,42 +182,7 @@ export default function About() {
         </div>
 
         {/* Trusted Clients Carousel */}
-        <div>
-          <div className="flex justify-between items-center  ">
-            <h2 className="text-xl font-semibold">Trusted Clients</h2>
-            <div className="space-x-2">
-              <button onClick={prevCard}>
-                <FaArrowLeft />
-              </button>
-              <button onClick={nextCard}>
-                <FaArrowRight />
-              </button>
-            </div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4  ">
-            {[
-              clients[currentIndex],
-              clients[(currentIndex + 1) % clients.length],
-            ].map((client, idx) => (
-              <div
-                key={idx}
-                className="bg-white p-4 rounded-xl shadow relative dark:bg-gray-900  dark:border-cyan-500 border"
-              >
-                <div className="absolute top-2 right-2 flex text-yellow-400 ">
-                  {[...Array(client.rating)].map((_, i) => (
-                    <FaStar key={i} />
-                  ))}
-                </div>
-                <p className="mt-6 text-sm text-gray-700 dark:text-gray-300">
-                  {client.description}
-                </p>
-                <h3 className="mt-6 text-sm text-gray-500-700 dark:text-gray-300">
-                  {client.Name}
-                </h3>
-              </div>
-            ))}
-          </div>
-        </div>
+       
       </div>
     </div>
   );
