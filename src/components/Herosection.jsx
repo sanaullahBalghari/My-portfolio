@@ -88,7 +88,7 @@ const Herosection = () => {
           </div>
         </section>
         <ShortAbout />
-        {/* Services Section */}
+        {/* Services Section
         <div className="bg-white-900 shadow rounded-2xl p-6 md:p-10 mt-10 mx-10 dark:bg-gray-900 transition-colors duration-300 ">
           <div className="flex justify-between items-center mb-6 ">
             <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 dark:text-gray-100 ">
@@ -132,8 +132,60 @@ const Herosection = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
+{/* Services Section */}
+<div className="bg-gradient-to-br from-white to-gray-100 dark:from-gray-900 dark:to-gray-800 shadow-xl rounded-2xl p-4 sm:p-6 md:p-8 lg:p-10 mt-8 mx-4 sm:mx-6 md:mx-10 animate-fade-in transition-colors duration-300">
+  <div className="flex justify-between items-center mb-6">
+    <h2 className="text-2xl  sm:text-3xl lg:text-4xl font-bold text-gray-800 dark:text-gray-100 tracking-tight">
+      Services I Offer
+    </h2>
+    <a
+      href="/services"
+      className="text-blue-600 dark:text-blue-400 hover:underline text-sm sm:text-base font-semibold flex items-center  rounded"
+      aria-label="View all services"
+    >
+      See All Services
+      <svg
+        className="ml-2 w-5 h-5 text-blue-600 dark:text-blue-400"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M9 5l7 7-7 7"
+        />
+      </svg>
+    </a>
+  </div>
 
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+    {services && services.length > 0 ? (
+      services.map((service, index) => (
+        <div
+          key={service.id || index}
+          className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-700 rounded-xl p-4 sm:p-6 flex flex-col items-center text-center shadow-md hover:shadow-lg hover:scale-[1.03] transform transition-all duration-300 border border-gray-200 dark:border-purple-500 group"
+        >
+          <img
+            src={service.icon}
+            alt={service.title}
+            className="w-16 h-16 sm:w-20 sm:h-20 mb-4 group-hover:rotate-6 transition-transform duration-300"
+            onError={(e) => (e.target.src = '/images/fallback-service.png')}
+          />
+          <p className="text-base sm:text-lg font-semibold text-gray-700 dark:text-gray-100 tracking-wide">
+            {service.title}
+          </p>
+        </div>
+      ))
+    ) : (
+      <div className="col-span-full text-center text-gray-500 dark:text-gray-400">
+        No services available at the moment.
+      </div>
+    )}
+  </div>
+</div>
         {/* Contact Section */}
         <div className="min-h-screen flex flex-col items-center justify-start p-4 mt-24">
           <div className="bg-white rounded-[2rem] shadow-xl w-full max-w-6xl overflow-hidden flex flex-col lg:flex-row mb-10  dark:bg-gray-900 dark:border-cyan-500 border dark:text-white">
