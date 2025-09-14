@@ -187,116 +187,102 @@ const Herosection = () => {
   </div>
 </div>
         {/* Contact Section */}
-        <div className="min-h-screen flex flex-col items-center justify-start p-4 mt-24">
-          <div className="bg-white rounded-[2rem] shadow-xl w-full max-w-6xl overflow-hidden flex flex-col lg:flex-row mb-10  dark:bg-gray-900 dark:border-cyan-500 border dark:text-white">
-            {/* Left: Form */}
-            <div className="w-full lg:w-1/2 p-10 ">
-              <h2 className="text-3xl font-bold text-indigo-700 mb-4">
-                Let's talk
-              </h2>
-              <p className="mb-6 text-gray-600 max-w-2xl mx-auto text-base md:text-lg   dark:text-gray-300 ">
-                To request a quote or want to meet up for coffee, contact us
-                directly or fill out the form and we will get back to you
-                promptly.
-              </p>
-              {/* Added onSubmit handler here */}
-              <form className="space-y-4 " onSubmit={sendEmail}>
-                <input
-                  type="text"
-                  name="name" // added name attribute for EmailJS
-                  placeholder="Your Name"
-                  className="w-full px-4 py-3 rounded-md bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500  dark:bg-gray-900 dark:border-cyan-500 border  dark:text-gray-100  "
-                  required
-                />
-                <input
-                  type="email"
-                  name="email" // added name attribute for EmailJS
-                  placeholder="Your Email"
-                  className="w-full px-4 py-3 rounded-md bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500  dark:bg-gray-900 dark:border-cyan-500 border"
-                  required
-                />
-                <textarea
-                  name="message" // added name attribute for EmailJS
-                  placeholder="Type something if you want..."
-                  rows="4"
-                  className="w-full px-4 py-3 rounded-md bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500  dark:bg-gray-900 dark:border-cyan-500 border"
-                  required
-                ></textarea>
-                <button
-                  type="submit"
-                  className="bg-indigo-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-indigo-700 transition  dark:bg-gray-900 dark:border-cyan-500 border"
-                >
-                  Send Message
-                </button>
-              </form>
-            </div>
+      <div className="min-h-screen flex flex-col items-center justify-start px-2 sm:px-4 md:px-6 mt-24">
+  <div className="bg-white rounded-[2rem] shadow-xl w-full max-w-5xl md:max-w-6xl overflow-hidden flex flex-col lg:flex-row mb-10 dark:bg-gray-900 dark:border-cyan-500 border dark:text-white">
+    
+    {/* Left: Form */}
+    <div className="w-full lg:w-1/2 p-6 sm:p-10">
+      <h2 className="text-2xl sm:text-3xl font-bold text-indigo-700 mb-4">
+        Let's talk
+      </h2>
+      <p className="mb-6 text-gray-600 text-base sm:text-lg dark:text-gray-300">
+        To request a quote or want to meet up for coffee, contact us
+        directly or fill out the form and we will get back to you
+        promptly.
+      </p>
 
-            {/* Right: Contact Info */}
-            <div className="w-full lg:w-1/2 bg-white relative p-10 flex flex-col items-start justify-center  dark:bg-gray-900 ">
-              <div
-                className="w-full flex justify-center mb-6"
-                data-aos="zoom-out"
-                data-aos-offset="200"
-                data-aos-delay="50"
-                data-aos-duration="1000"
-                data-aos-once="false"
-              >
-                <img
-                  src="/images/contact.jpg"
-                  alt="Envelope Icon"
-                  className="w-72 h-56 rounded-xl "
-                />
-              </div>
-              <div className="space-y-2 text-gray-600 max-w-2xl mx-auto text-base md:text-md  dark:text-gray-300">
-                <div className="flex items-center gap-2">
-                  <svg
-                    className="w-4 h-4 text-indigo-500"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
-                  </svg>
-                  Software Technolgoy Park Kotli Aj&k
-                </div>
-                <div className="flex items-center gap-2">
-                  <svg
-                    className="w-4 h-4 text-indigo-500"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M6.62 10.79a15.054 15.054 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 
-                1.12.37 2.33.57 3.57.57.55 0 1 .45 
-                1 1v3.5c0 .55-.45 1-1 
-                1C9.39 22 2 14.61 2 
-                5c0-.55.45-1 1-1H6.5c.55 
-                0 1 .45 1 1 0 1.24.2 2.45.57 
-                3.57.11.35.03.74-.24 
-                1.02l-2.2 2.2z"
-                    />
-                  </svg>
-                  +92498026152
-                </div>
-                <div className="flex items-center gap-2  ">
-                  <svg
-                    className="w-4 h-4 text-indigo-500"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M20 4H4c-1.1 0-2 
-                .9-2 2v12c0 1.1.9 2 2 
-                2h16c1.1 0 2-.9 
-                2-2V6c0-1.1-.9-2-2-2zM4 
-                8l8 5 8-5v-.01L12 13 4 7.99V8z"
-                    />
-                  </svg>
-                  sanaullahakhonzada289@gmail.com
-                </div>
-              </div>
-            </div>
-          </div>
+      <form className="space-y-4" onSubmit={sendEmail}>
+        <input
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          className="w-full px-4 py-3 rounded-md bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-gray-900 dark:border-cyan-500 border dark:text-gray-100"
+          required
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Your Email"
+          className="w-full px-4 py-3 rounded-md bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-gray-900 dark:border-cyan-500 border"
+          required
+        />
+        <textarea
+          name="message"
+          placeholder="Type something if you want..."
+          rows="4"
+          className="w-full px-4 py-3 rounded-md bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-gray-900 dark:border-cyan-500 border"
+          required
+        ></textarea>
+        <button
+          type="submit"
+          className="bg-indigo-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-indigo-700 transition dark:bg-gray-900 dark:border-cyan-500 border"
+        >
+          Send Message
+        </button>
+      </form>
+    </div>
+
+    {/* Right: Contact Info */}
+    <div className="w-full lg:w-1/2 bg-white relative p-6 sm:p-10 flex flex-col items-start justify-center dark:bg-gray-900">
+      <div
+        className="w-full flex justify-center mb-6"
+        data-aos="zoom-out"
+        data-aos-offset="200"
+        data-aos-delay="50"
+        data-aos-duration="1000"
+        data-aos-once="false"
+      >
+        <img
+          src="/images/contact.jpg"
+          alt="Envelope Icon"
+          className="w-64 h-48 sm:w-72 sm:h-56 rounded-xl"
+        />
+      </div>
+      <div className="space-y-2 text-gray-600 text-base sm:text-md dark:text-gray-300">
+        <div className="flex items-center gap-2">
+          <svg className="w-4 h-4 text-indigo-500" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
+          </svg>
+          Software Technolgoy Park Kotli Aj&k
         </div>
+        <div className="flex items-center gap-2">
+          <svg className="w-4 h-4 text-indigo-500" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M6.62 10.79a15.054 15.054 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 
+              1.12.37 2.33.57 3.57.57.55 0 1 .45 
+              1 1v3.5c0 .55-.45 1-1 
+              1C9.39 22 2 14.61 2 
+              5c0-.55.45-1 1-1H6.5c.55 
+              0 1 .45 1 1 0 1.24.2 2.45.57 
+              3.57.11.35.03.74-.24 
+              1.02l-2.2 2.2z"/>
+          </svg>
+          +92498026152
+        </div>
+        <div className="flex items-center gap-2">
+          <svg className="w-4 h-4 text-indigo-500" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20 4H4c-1.1 0-2 
+              .9-2 2v12c0 1.1.9 2 2 
+              2h16c1.1 0 2-.9 
+              2-2V6c0-1.1-.9-2-2-2zM4 
+              8l8 5 8-5v-.01L12 13 4 7.99V8z"/>
+          </svg>
+          sanaullahakhonzada289@gmail.com
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
       </>
     </div>
   );
